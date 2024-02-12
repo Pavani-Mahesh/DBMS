@@ -1,0 +1,104 @@
+create database university
+create table student
+(
+   SID  int  primary key,
+   SName varchar(10),
+   DID int not null foreign key references dept(DID),
+   Mobile varchar(10) null,
+   Age int null,
+   Gender char(1) not null check(Gender='M' or Gender='F'),
+   Address varchar(10) not null
+ )
+
+ insert into student values(1548,'PAVANI',15,9652712439,19,'F','CHITTOOR')
+ insert into student values(3750,'ISWARYA',37,7207367619,18,'F','ONGOLE')
+ insert into student values(1263,'SARASWATHI',12,8125752342,19,'F','NELLORE')
+ insert into student values(1549,'RUCHITHA',15,9182028284,18,'F','NANDYAL')
+ insert into student values(1830,'NAVEENA',18,9467498297,20,'F','KADAPA')
+ insert into student values(1547,'PRIYANKA',15,9648739342,20,'F','NELLORE')
+ insert into student values(1535,'UJVALA',15,9472394672,19,'F','KADAPA')
+ insert into student values(1550,'SAILAJA',15,8736125181,20,'F','CHITTOOR')
+ insert into student values(3702,'PAVANASREE',37,9455638268,19,'F','VIJAYAWADA')
+ insert into student values(3728,'SRAVIKA',37,8736125181,20,'F','ONGOLE')
+
+ select * from student
+
+ create table dept
+ (
+    DID int primary key,
+	DName varchar(5) not null
+)
+
+insert into dept values(15,'CSSE')
+insert into dept values(12,'IT')
+insert into dept values(1,'CIVIL')
+insert into dept values(2,'EEE')
+insert into dept values(5,'CSE')
+insert into dept values(37,'CS')
+insert into dept values(3,'ECE')
+insert into dept values(4,'MECH')
+insert into dept values(18,'CD')
+
+select * from dept
+
+create table course
+(
+  CID int primary key,
+  CName varchar(40) not null,
+  Category char(1) null check(Category='B'or Category='M' or Category='A'),
+  Fee money not null check(Fee>=0)
+ )
+ 
+ insert into course values(12,'PYTHON','M',1100)
+ insert into course values(28,'JAVA','A',1800)
+ insert into course values(55,'C++','B',0)
+ insert into course values(27,'C','M',1000)
+ insert into course values(18,'DATA ANALYSIS AND ALGORITHMS','M',0)
+ insert into course values(2,'DATA STRUCTURES AND ALGORITHMS','A',1000)
+ insert into course values(37,'DATABASE AND MANAGEMENT SYSTEM','M',0)
+ insert into course values(56,'THEORY OF COMPUTATIONS','A',0)
+ insert into course values(48,'DISCRETE MATHEMATICS AND STATISTICS','B',500)
+ insert into course values(65,'OPERATING SYSTEMS','A',1200)
+ insert into course values(11,'COMPUTER ARCHITECTURE','A',2000)
+
+ select * from course
+
+ create table enrollment
+ (
+   CID int not null foreign key references course(CID),
+   SID int not null foreign key references student(SID),
+   DOE date not null,
+   Grade char check(Grade='O'or Grade='A' or Grade='B'or Grade='C')
+ )
+
+ insert into enrollment values(12,1548,'2023-03-07','O')
+ insert into enrollment values(55,1549,'2022-11-27','A')
+ insert into enrollment values(48,1547,'2023-06-27','B')
+ insert into enrollment values(11,1535,'2021-02-17','C')
+ insert into enrollment values(27,1550,'2022-01-17','O')
+ insert into enrollment values(28,3750,'2023-03-07','O')
+ insert into enrollment values(18,1263,'2022-11-27','A')
+ insert into enrollment values(2,3702,'2023-06-27','B')
+ insert into enrollment values(37,3728,'2021-02-17','C')
+ insert into enrollment values(56,1830,'2022-01-17','O')
+
+ select * from enrollment
+
+create table employee
+(
+  EID int primary key,
+  EName varchar(10) not null,
+  DID int not null foreign key references dept(DID),
+  salary money not null,
+  Gender char(1) not null check(Gender='M' or Gender='F'),
+  city varchar(30) null,
+  mobile varchar(10) null
+ )
+
+ insert into employee values(201,'YOGI',15,100000,'M','TIRUPATI',8971276252)
+ insert into employee values(202,'RAMU',3,150000,'M','BANGLORE',9365367632)
+ insert into employee values(203,'RANJITHA',37,120000,'F','TIRUPATI',7899336252)
+ insert into employee values(204,'SHIVA',18,200000,'M','HYDERABAD',9565266212)
+ insert into employee values(205,'SUDHARSHAN',12,250000,'M','MUMBAI',7999266252)
+
+ select * from employee
