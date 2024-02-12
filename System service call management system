@@ -1,0 +1,909 @@
+CREATE DATABASE SCMS
+
+CREATE TABLE Customers(
+   CustomerID INT PRIMARY KEY,
+   Name VARCHAR(255) NOT NULL,
+   Email VARCHAR(255),
+   Address VARCHAR(255),
+   Phone VARCHAR(20)
+);
+
+INSERT INTO Customers VALUES(1, 'John Doe', 'john@gmail.com', '123 Main St', '9477515234')
+INSERT INTO Customers VALUES(2, 'Jane Smith', 'jane@gmail.com', '456 Elm St', '9774674833')
+INSERT INTO Customers VALUES(3, 'Michael Johnson', 'michael@gmail.com', '789 Oak St', '9477563832')
+INSERT INTO Customers VALUES(4, 'Emily Davis', 'emily@gmail.com', '321 Pine St', '8885553456')
+INSERT INTO Customers VALUES(5, 'Robert Wilson', 'robert@gmail.com', '654 Maple St', '7775557890')
+INSERT INTO Customers VALUES(6, 'Jennifer Anderson', 'jennifer@gmail.com', '987 Cedar St', '6665552345')
+INSERT INTO Customers VALUES(7, 'David Martinez', 'david@gmail.com', '159 Birch St', '9995556789')
+INSERT INTO Customers VALUES(8, 'Jessica Taylor', 'jessica@gmail.com', '753 Willow St', '7775550123')
+INSERT INTO Customers VALUES(9, 'Christopher Garcia', 'christopher@gmail.com', '951 Spruce St', '6665554567')
+INSERT INTO Customers VALUES(10, 'Sarah Rodriguez', 'sarah@gmail.com', '357 Pineapple St', '9875558901')
+INSERT INTO Customers VALUES(11, 'Daniel Hernandez', 'daniel@gmail.com', '753 Cherry St', '8675552345')
+INSERT INTO Customers VALUES(12, 'Lisa Lopez', 'lisa@gmail.com', '159 Orange St', '6575556789')
+INSERT INTO Customers VALUES(13, 'Matthew Gonzalez', 'matthew@gmail.com', '951 Strawberry St', '6785550123')
+INSERT INTO Customers VALUES(14, 'Ashley Perez', 'ashley@gmail.com', '357 Lemon St', '8765554567')
+INSERT INTO Customers VALUES(15, 'Amanda Turner', 'amanda@gmail.com', '753 Grape St', '6545558901')
+INSERT INTO Customers VALUES(16, 'Brian Baker', 'brian@gmail.com', '159 Blueberry St', '8765552345')
+INSERT INTO Customers VALUES(17, 'Stephanie Adams', 'stephanie@gmail.com', '951 Raspberry St', '8765556789')
+INSERT INTO Customers VALUES(18, 'Andrew Campbell', 'andrew@gmail.com', '357 Blackberry St', '9995550123')
+INSERT INTO Customers VALUES(19, 'Megan Murphy', 'megan@gmail.com', '753 Strawberry St', '9875554567')
+INSERT INTO Customers VALUES(20, 'Kevin Kelly', 'kevin@gmail.com', '159 Orange St', '8765558901')
+INSERT INTO Customers VALUES(21, 'Laura Cook', 'laura@gmail.com', '951 Lemon St', '7655552345')
+INSERT INTO Customers VALUES(22, 'Mark Bennett', 'mark@gmail.com', '357 Apple St', '7665556789')
+INSERT INTO Customers VALUES(23, 'Rachel Ward', 'rachel@gmail.com', '753 Pear St', '6675550123')
+INSERT INTO Customers VALUES(24, 'Thomas Cox', 'thomas@gmail.com', '159 Peach St', '5556544567')
+INSERT INTO Customers VALUES(25, 'Rebecca Hughes', 'rebecca@gmail.com', '951 Plum St', '555-8901')
+INSERT INTO Customers VALUES(26, 'Charles Butler', 'charles@gmail.com', '357 Grape St', '55511222345')
+INSERT INTO Customers VALUES(27, 'Nicole Simmons', 'nicole@gmail.com', '753 Mango St', '5551436789')
+INSERT INTO Customers VALUES(28, 'Jeremy Foster', 'jeremy@gmail.com', '159 Kiwi St', '5551230123')
+INSERT INTO Customers VALUES(29, 'Amy Russell', 'amy@gmail.com', '951 Banana St', '9488565664')
+INSERT INTO Customers VALUES(30, 'Amy', 'my@gmail.com', '51 apple St', '6474633824')
+
+SELECT * FROM Customers
+
+CREATE TABLE Employees (
+EmployeeID INT PRIMARY KEY,
+Name VARCHAR(255) NOT NULL,
+Department VARCHAR(100),
+Position VARCHAR(100),
+Phone VARCHAR(20),
+Email VARCHAR(255)
+);
+
+INSERT INTO Employees VALUES(31, 'Michael Johnson', 'IT', 'Technician', '5551239012', 'michael@gmail.com')
+INSERT INTO Employees VALUES(32, 'Emily Davis', 'Sales', 'Sales Representative', '9875553456', 'emily@gmail.com')
+INSERT INTO Employees VALUES(33, 'Robert Wilson', 'Marketing', 'Marketing Specialist', '7655557890', 'robert@gmail.com')
+INSERT INTO Employees VALUES(34, 'Jennifer Anderson', 'IT', 'Technician', '7615552345', 'jennifer@gmail.com')
+INSERT INTO Employees VALUES(35, 'David Martinez', 'Finance', 'Accountant', '6665556789', 'david@gmail.com')
+INSERT INTO Employees VALUES(36, 'Jessica Taylor', 'HR', 'Recruiter', '5557760123', 'jessica@gmail.com')
+INSERT INTO Employees VALUES(37, 'Christopher Garcia', 'IT', 'Technician', '5557774567', 'christopher@gmail.com')
+INSERT INTO Employees VALUES(38, 'Sarah Rodriguez', 'Sales', 'Sales Manager', '9995558901', 'sarah@gmail.com')
+INSERT INTO Employees VALUES(39, 'Daniel Hernandez', 'Marketing', 'Marketing Manager', '8765552345', 'daniel@gmail.com')
+INSERT INTO Employees VALUES(40, 'Lisa Lopez', 'HR', 'HR Manager', '3455556789', 'lisa@gmail.com')
+INSERT INTO Employees VALUES(41, 'Matthew Gonzalez', 'Finance', 'Financial Analyst', '6545550123', 'matthew@gmail.com')
+INSERT INTO Employees VALUES(42, 'Ashley Perez', 'IT', 'Technician', '7655554567', 'ashley@gmail.com')
+INSERT INTO Employees VALUES(43, 'Amanda Turner', 'Sales', 'Sales Representative', '7655558901', 'amanda@gmail.com')
+INSERT INTO Employees VALUES(44, 'Brian Baker', 'Marketing', 'Marketing Specialist', '8885552345', 'brian@gmail.com')
+INSERT INTO Employees VALUES(45, 'Stephanie Adams', 'HR', 'HR Specialist', '8765556789', 'stephanie@gmail.com')
+INSERT INTO Employees VALUES(46, 'Andrew Campbell', 'Finance', 'Accountant', '8885550123', 'andrew@gmail.com')
+INSERT INTO Employees VALUES(47, 'Megan Murphy', 'IT', 'Technician', '8755554567', 'megan@gmail.com')
+INSERT INTO Employees VALUES(48, 'Kevin Kelly', 'Sales', 'Sales Representative', '9935558901', 'kevin@gmail.com')
+INSERT INTO Employees VALUES(49, 'Laura Cook', 'Marketing', 'Marketing Specialist', '5559772345', 'laura@gmail.com')
+INSERT INTO Employees VALUES(50, 'Mark Bennett', 'Finance', 'Financial Analyst', '7655556789', 'mark@gmail.com')
+INSERT INTO Employees VALUES(51, 'Rachel Ward', 'IT', 'Technician', '7775550123', 'rachel@gmail.com')
+INSERT INTO Employees VALUES(52, 'Thomas Cox', 'Sales', 'Sales Representative', '3215554567', 'thomas@gmail.com')
+INSERT INTO Employees VALUES(53, 'Rebecca Hughes', 'Marketing', 'Marketing Specialist', '8765558901', 'rebecca@gmail.com')
+INSERT INTO Employees VALUES(54, 'Charles Butler', 'HR', 'HR Specialist', '7765552345', 'charles@gmail.com')
+INSERT INTO Employees VALUES(55, 'Nicole Simmons', 'Finance', 'Accountant', '8895556789', 'nicole@gmail.com')
+INSERT INTO Employees VALUES(56, 'Jeremy Foster', 'IT', 'Technician', '6655550123', 'jeremy@gmail.com')
+INSERT INTO Employees VALUES(57, 'Amy Russell', 'Sales', 'Sales Representative', '8765554567', 'amy@gmail.com')
+INSERT INTO Employees VALUES(58, 'Eric Turner', 'Marketing', 'Marketing Specialist', '8765558901', 'eric@gmail.com')
+INSERT INTO Employees VALUES(59, 'Melissa White', 'HR', 'HR Specialist', '9085552345', 'melissa@gmail.com')
+INSERT INTO Employees VALUES(60, 'Steven Powell', 'Finance', 'Financial Analyst', '8005556789', 'steven@gmail.com')
+
+SELECT * FROM Employees
+
+CREATE TABLE ServiceCalls (
+   ServiceCallID INT PRIMARY KEY,
+   CustomerID INT FOREIGN KEY REFERENCES Customers(CustomerID),
+   EmployeeID INT FOREIGN KEY REFERENCES Employees(EmployeeID),
+   DateOpened DATE NOT NULL,
+   DateClosed DATE,
+   Description VARCHAR(500),
+   Status VARCHAR(50)
+);
+
+INSERT INTO ServiceCalls VALUES(101, 1, 31, '2023-01-01', '2023-01-02', 'Closed', 'Network connectivity issue')
+INSERT INTO ServiceCalls VALUES(102, 2, 42, '2023-01-02', '2023-01-03', 'Closed', 'Software installation problem')
+INSERT INTO ServiceCalls VALUES(103, 3, 53, '2023-01-03', NULL, 'Open', 'Printer not working')
+INSERT INTO ServiceCalls VALUES(104, 4, 34, '2023-01-04', '2023-01-05', 'Closed', 'Server crash')
+INSERT INTO ServiceCalls VALUES(105, 5, 45, '2023-01-05', '2023-01-06', 'Closed', 'Website downtime')
+INSERT INTO ServiceCalls VALUES(106, 6, 56, '2023-01-06', '2023-01-07', 'Closed', 'Data backup request')
+INSERT INTO ServiceCalls VALUES(107, 7, 37, '2023-01-07', NULL, 'Open', 'Email synchronization issue')
+INSERT INTO ServiceCalls VALUES(108, 8, 48, '2023-01-08', '2023-01-09', 'Closed', 'Software bug report')
+INSERT INTO ServiceCalls VALUES(109, 9, 59, '2023-01-09', '2023-01-10', 'Closed', 'Network router replacement')
+INSERT INTO ServiceCalls VALUES(110, 10,40, '2023-01-10', '2023-01-11', 'Closed', 'Data recovery request')
+INSERT INTO ServiceCalls VALUES(111, 1, 51, '2023-01-11', '2023-01-12', 'Closed', 'Email configuration problem')
+INSERT INTO ServiceCalls VALUES(112, 2, 32, '2023-01-12', NULL, 'Open', 'Database connection error')
+INSERT INTO ServiceCalls VALUES(113, 3, 43, '2023-01-13', '2023-01-14', 'Closed', 'Website performance issue')
+INSERT INTO ServiceCalls VALUES(114, 4, 54, '2023-01-14', '2023-01-15', 'Closed', 'Software upgrade request')
+INSERT INTO ServiceCalls VALUES(115, 5, 35, '2023-01-15', '2023-01-16', 'Closed', 'Data synchronization problem')
+INSERT INTO ServiceCalls VALUES(116, 6, 46, '2023-01-16', '2023-01-17', 'Closed', 'Hardware failure')
+INSERT INTO ServiceCalls VALUES(117, 7, 57, '2023-01-17', NULL, 'Open', 'Application error')
+INSERT INTO ServiceCalls VALUES(118, 8, 38, '2023-01-18', '2023-01-19', 'Closed', 'Network security audit')
+INSERT INTO ServiceCalls VALUES(119, 9, 49, '2023-01-19', '2023-01-20', 'Closed', 'Data migration request')
+INSERT INTO ServiceCalls VALUES(120, 10,50, '2023-01-20', '2023-01-21', 'Closed', 'Server maintenance')
+INSERT INTO ServiceCalls VALUES(121, 1, 31, '2023-01-21', '2023-01-22', 'Closed', 'Email server down')
+INSERT INTO ServiceCalls VALUES(122, 2, 42, '2023-01-22', NULL, 'Open', 'Software licensing issue')
+INSERT INTO ServiceCalls VALUES(123, 3, 53, '2023-01-23', '2023-01-24', 'Closed', 'Website content update')
+INSERT INTO ServiceCalls VALUES(124, 4, 34, '2023-01-24', '2023-01-25', 'Closed', 'Network firewall configuration')
+INSERT INTO ServiceCalls VALUES(125, 5, 45, '2023-01-25', '2023-01-26', 'Closed', 'Data backup failure')
+
+SELECT * FROM ServiceCalls
+
+CREATE TABLE ServiceCallNotes (
+   NoteID INT PRIMARY KEY,
+   ServiceCallID INT FOREIGN KEY REFERENCES ServiceCalls(ServiceCallID),
+   EmployeeID INT FOREIGN KEY REFERENCES Employees(EmployeeID),
+   NoteDate DATE,
+   Note VARCHAR(500)
+);
+
+INSERT INTO ServiceCallNotes VALUES(1001, 101, 31, '2023-01-01', 'Resolved the network connectivity issue.')
+INSERT INTO ServiceCallNotes VALUES(1002, 101, 34, '2023-01-02', 'Followed up with the customer to ensure the issue was fully resolved.')
+INSERT INTO ServiceCallNotes VALUES(1003, 102, 32, '2023-01-02', 'Successfully installed the software and verified its functionality.')
+INSERT INTO ServiceCallNotes VALUES(1004, 102, 33, '2023-01-03', 'Provided instructions to the customer on how to use the newly installed software.')
+INSERT INTO ServiceCallNotes VALUES(1005, 103, 35, '2023-01-03', 'Identified the printer hardware issue and ordered replacement parts.')
+INSERT INTO ServiceCallNotes VALUES(1006, 104, 34, '2023-01-04', 'Rebooted the server and restored the system to normal operation.')
+INSERT INTO ServiceCallNotes VALUES(1007, 105, 37, '2023-01-05', 'Investigated the website downtime and resolved the issue.')
+INSERT INTO ServiceCallNotes VALUES(1008, 105, 36, '2023-01-06', 'Performed server maintenance to prevent future downtime.')
+INSERT INTO ServiceCallNotes VALUES(1009, 106, 38, '2023-01-06', 'Completed the data backup as per the customer''s request.')
+INSERT INTO ServiceCallNotes VALUES(1010, 106, 40, '2023-01-07', 'Confirmed the successful completion of the data backup.')
+INSERT INTO ServiceCallNotes VALUES(1011, 107, 39, '2023-01-07', 'Synchronized the customer''s email account with the server.')
+INSERT INTO ServiceCallNotes VALUES(1012, 108, 41, '2023-01-08', 'Investigated the software bug and provided a temporary workaround.')
+INSERT INTO ServiceCallNotes VALUES(1013, 108, 42, '2023-01-09', 'Submitted a bug report to the development team for further investigation.')
+INSERT INTO ServiceCallNotes VALUES(1014, 109, 44, '2023-01-09', 'Replaced the faulty network router and ensured proper connectivity.')
+INSERT INTO ServiceCallNotes VALUES(1015, 110, 45, '2023-01-10', 'Recovered the customer''s data from the backup and restored it.')
+INSERT INTO ServiceCallNotes VALUES(1016, 111, 46, '2023-01-11', 'Configured the email settings to resolve the email configuration problem.')
+INSERT INTO ServiceCallNotes VALUES(1017, 112, 47, '2023-01-12', 'Investigated the database connection error and identified the root cause.')
+INSERT INTO ServiceCallNotes VALUES(1018, 113, 49, '2023-01-13', 'Optimized the website performance and improved its response time.')
+INSERT INTO ServiceCallNotes VALUES(1019, 114, 50, '2023-01-14', 'Upgraded the software to the latest version and ensured compatibility.')
+INSERT INTO ServiceCallNotes VALUES(1020, 115, 52, '2023-01-15', 'Investigated the data synchronization problem and resolved the issue.')
+INSERT INTO ServiceCallNotes VALUES(1021, 116, 54, '2023-01-16', 'Replaced the faulty hardware component and restored normal operation.')
+INSERT INTO ServiceCallNotes VALUES(1022, 117, 55, '2023-01-17', 'Investigated the application error and provided a solution.')
+INSERT INTO ServiceCallNotes VALUES(1023, 118, 57, '2023-01-18', 'Conducted a network security audit and implemented necessary measures.')
+INSERT INTO ServiceCallNotes VALUES(1024, 119, 58, '2023-01-19', 'Migrated the customer''s data to a new system and verified its integrity.')
+INSERT INTO ServiceCallNotes VALUES(1025, 120, 60, '2023-01-20', 'Performed server maintenance tasks as per the customer''s request.')
+INSERT INTO ServiceCallNotes VALUES(1026, 121, 52, '2023-01-21', 'Restored the email server functionality and ensured smooth operation.')
+INSERT INTO ServiceCallNotes VALUES(1027, 122, 54, '2023-01-22', 'Assisted the customer with resolving software licensing issues.')
+INSERT INTO ServiceCallNotes VALUES(1028, 123, 56, '2023-01-23', 'Updated the website content as requested by the customer.')
+INSERT INTO ServiceCallNotes VALUES(1029, 124, 58, '2023-01-24', 'Configured the network firewall to enhance security and block unwanted access.')
+INSERT INTO ServiceCallNotes VALUES(1030, 125, 60, '2023-01-25', 'Resolved the data backup failure issue and performed a successful backup.')
+
+SELECT * FROM ServiceCallNotes
+
+CREATE TABLE ServiceCallHistory (
+   HistoryID INT PRIMARY KEY,
+   ServiceCallID INT FOREIGN KEY REFERENCES ServiceCalls(ServiceCallID),
+   EmployeeID INT FOREIGN KEY REFERENCES Employees(EmployeeID),
+   ActionDate DATE,
+   ActionDescription VARCHAR(500)
+);
+
+INSERT INTO ServiceCallHistory VALUES(201, 101, 31, '2023-01-01', 'Opened service call for network connectivity issue.')
+INSERT INTO ServiceCallHistory VALUES(202, 111, 44, '2023-01-02', 'Assigned the service call to technician John Smith.')
+INSERT INTO ServiceCallHistory VALUES(203, 121, 51, '2023-01-03', 'John Smith resolved the network connectivity issue.')
+INSERT INTO ServiceCallHistory VALUES(204, 102, 32, '2023-01-02', 'Opened service call for software installation problem.')
+INSERT INTO ServiceCallHistory VALUES(205, 112, 43, '2023-01-03', 'Assigned the service call to technician Lisa Johnson.')
+INSERT INTO ServiceCallHistory VALUES(206, 122, 52, '2023-01-05', 'Lisa Johnson successfully installed the software.')
+INSERT INTO ServiceCallHistory VALUES(207, 103, 35, '2023-01-03', 'Opened service call for printer not working issue.')
+INSERT INTO ServiceCallHistory VALUES(208, 113, 46, '2023-01-04', 'Assigned the service call to technician David Brown.')
+INSERT INTO ServiceCallHistory VALUES(209, 123, 55, '2023-01-06', 'David Brown identified the hardware issue and ordered replacement parts.')
+INSERT INTO ServiceCallHistory VALUES(210, 103, 36, '2023-01-08', 'Replaced the faulty printer parts and verified functionality.')
+INSERT INTO ServiceCallHistory VALUES(211, 104, 44, '2023-01-04', 'Opened service call for server crash issue.')
+INSERT INTO ServiceCallHistory VALUES(212, 114, 57, '2023-01-05', 'Assigned the service call to technician Sarah Wilson.')
+INSERT INTO ServiceCallHistory VALUES(213, 124, 34, '2023-01-06', 'Sarah Wilson rebooted the server and restored normal operation.')
+INSERT INTO ServiceCallHistory VALUES(214, 105, 47, '2023-01-05', 'Opened service call for website downtime issue.')
+INSERT INTO ServiceCallHistory VALUES(215, 115, 56, '2023-01-06', 'Assigned the service call to technician Andrew Davis.')
+INSERT INTO ServiceCallHistory VALUES(216, 125, 37, '2023-01-07', 'Investigated the website downtime and resolved the issue.')
+INSERT INTO ServiceCallHistory VALUES(217, 106, 48, '2023-01-06', 'Opened service call for data backup request.')
+INSERT INTO ServiceCallHistory VALUES(218, 116, 60, '2023-01-07', 'Assigned the service call to technician Michael Thompson.')
+INSERT INTO ServiceCallHistory VALUES(219, 106, 38, '2023-01-08', 'Completed the data backup as per the customer''s request.')
+INSERT INTO ServiceCallHistory VALUES(220, 16, 40, '2023-01-10', 'Confirmed the successful completion of the data backup.')
+INSERT INTO ServiceCallHistory VALUES(221, 107, 59, '2023-01-07', 'Opened service call for email synchronization issue.')
+INSERT INTO ServiceCallHistory VALUES(222, 117, 32, '2023-01-08', 'Assigned the service call to technician Jennifer Adams.')
+INSERT INTO ServiceCallHistory VALUES(223, 107, 49, '2023-01-09', 'Jennifer Adams synchronized the email account with the server.')
+INSERT INTO ServiceCallHistory VALUES(224, 108, 31, '2023-01-08', 'Opened service call for software bug report.')
+INSERT INTO ServiceCallHistory VALUES(225, 118, 42, '2023-01-09', 'Assigned the service call to technician Robert Clark.')
+INSERT INTO ServiceCallHistory VALUES(226, 108, 51, '2023-01-10', 'Robert Clark investigated the software bug and provided a temporary workaround.')
+INSERT INTO ServiceCallHistory VALUES(227, 109, 34, '2023-01-09', 'Opened service call for network router replacement.')
+INSERT INTO ServiceCallHistory VALUES(228, 119, 43, '2023-01-10', 'Assigned the service call to technician Mary Green.')
+INSERT INTO ServiceCallHistory VALUES(229, 109, 54, '2023-01-11', 'Replaced the faulty network router and ensured proper connectivity.')
+INSERT INTO ServiceCallHistory VALUES(230, 110, 35, '2023-01-10', 'Opened service call for data recovery request.')
+
+SELECT * FROM ServiceCallHistory
+
+CREATE TABLE Products (
+   ProductID INT PRIMARY KEY,
+   Name VARCHAR(255),
+   Description VARCHAR(500),
+   Price DECIMAL(10,2)
+);
+
+INSERT INTO Products VALUES(501, 'Laptop', 'A high-performance laptop for professional use.', 999.99)
+INSERT INTO Products VALUES(502, 'Smartphone', 'A feature-rich smartphone with advanced capabilities.', 799.99)
+INSERT INTO Products VALUES(503, 'Tablet', 'A portable tablet with a large display.', 499.99)
+INSERT INTO Products VALUES(504, 'Printer', 'A high-quality printer for home and office use.', 199.99)
+INSERT INTO Products VALUES(505, 'Monitor', 'A widescreen monitor with vibrant colors.', 299.99)
+INSERT INTO Products VALUES(506, 'Keyboard', 'A durable and ergonomic keyboard for comfortable typing.', 49.99)
+INSERT INTO Products VALUES(507, 'Mouse', 'A precision mouse for accurate cursor control.', 29.99)
+INSERT INTO Products VALUES(508, 'Headphones', 'High-fidelity headphones for immersive audio experience.', 149.99)
+INSERT INTO Products VALUES(509, 'Speakers', 'Powerful speakers for crystal-clear sound.', 79.99)
+INSERT INTO Products VALUES(510, 'External Hard Drive', 'A spacious external hard drive for data storage.', 129.99)
+INSERT INTO Products VALUES(511, 'USB Flash Drive', 'A portable USB flash drive for easy data transfer.', 19.99)
+INSERT INTO Products VALUES(512, 'Wireless Router', 'A high-speed wireless router for seamless internet connectivity.', 89.99)
+INSERT INTO Products VALUES(513, 'Ethernet Cable', 'A high-quality Ethernet cable for stable network connection.', 9.99)
+INSERT INTO Products VALUES(514, 'Webcam', 'A high-resolution webcam for video conferencing.', 59.99)
+INSERT INTO Products VALUES(515, 'Portable Charger', 'A compact portable charger for on-the-go device charging.', 39.99)
+INSERT INTO Products VALUES(516, 'Power Bank', 'A high-capacity power bank for extended device usage.', 49.99)
+INSERT INTO Products VALUES(517, 'Bluetooth Speaker', 'A portable Bluetooth speaker for wireless audio streaming.', 69.99)
+INSERT INTO Products VALUES(518, 'Wireless Earbuds', 'True wireless earbuds with long battery life.', 129.99)
+INSERT INTO Products VALUES(519, 'Smart Watch', 'A feature-packed smartwatch for health and fitness tracking.', 199.99)
+INSERT INTO Products VALUES(520, 'Fitness Tracker', 'A wearable fitness tracker to monitor daily activities.', 79.99)
+INSERT INTO Products VALUES(521, 'Camera', 'A versatile camera for capturing high-quality photos and videos.', 499.99)
+INSERT INTO Products VALUES(522, 'Tripod', 'A sturdy tripod for stable camera support.', 59.99)
+INSERT INTO Products VALUES(523, 'Drone', 'A compact drone for aerial photography and videography.', 299.99)
+INSERT INTO Products VALUES(524, 'Gaming Console', 'A gaming console for immersive gaming experience.', 399.99)
+INSERT INTO Products VALUES(525, 'Game Controller', 'A wireless game controller for console gaming.', 69.99)
+INSERT INTO Products VALUES(526, 'VR Headset', 'A virtual reality headset for immersive gaming and multimedia.', 299.99)
+INSERT INTO Products VALUES(527, 'Smart Home Hub', 'A central hub for controlling smart home devices.', 149.99)
+INSERT INTO Products VALUES(528, 'Smart Bulbs', 'Smart bulbs for customizable lighting in your home.', 19.99)
+INSERT INTO Products VALUES(529, 'Smart Thermostat', 'A programmable thermostat for efficient temperature control.', 129.99)
+INSERT INTO Products VALUES(530, 'Security Camera', 'A surveillance camera for monitoring your property.', 89.99)
+
+SELECT * FROM Products
+
+CREATE TABLE Contracts (
+   ContractID INT PRIMARY KEY,
+   CustomerID INT FOREIGN KEY REFERENCES Customers(CustomerID),
+   StartDate DATE,
+   EndDate DATE,
+   Description VARCHAR(500)
+);
+
+INSERT INTO Contracts VALUES(401, 1, '2023-01-01', '2023-12-31', 'Annual maintenance contract for IT infrastructure.')
+INSERT INTO Contracts VALUES(402, 2, '2023-02-15', '2024-02-14', 'Service level agreement for software support.')
+INSERT INTO Contracts VALUES(403, 3, '2023-03-10', '2024-03-09', 'Contract for managed network services.')
+INSERT INTO Contracts VALUES(404, 4, '2023-04-05', '2024-04-04', 'Agreement for cloud hosting services.')
+INSERT INTO Contracts VALUES(405, 5, '2023-05-20', '2024-05-19', 'Contract for website development and maintenance.')
+INSERT INTO Contracts VALUES(406, 6, '2023-06-12', '2024-06-11', 'Service agreement for data backup and recovery.')
+INSERT INTO Contracts VALUES(407, 7, '2023-07-18', '2024-07-17', 'Contract for email and communication services.')
+INSERT INTO Contracts VALUES(408, 8, '2023-08-25', '2024-08-24', 'Agreement for IT consulting and advisory services.')
+INSERT INTO Contracts VALUES(409, 9, '2023-09-07', '2024-09-06', 'Contract for hardware procurement and installation.')
+INSERT INTO Contracts VALUES(410, 10, '2023-10-30', '2024-10-29', 'Service level agreement for software maintenance and updates.')
+INSERT INTO Contracts VALUES(411, 11, '2023-11-14', '2024-11-13', 'Contract for network security assessment and remediation.')
+INSERT INTO Contracts VALUES(412, 12, '2023-12-03', '2024-12-02', 'Agreement for cloud migration and integration services.')
+INSERT INTO Contracts VALUES(413, 13, '2024-01-05', '2025-01-04', 'Contract for website hosting and domain management.')
+INSERT INTO Contracts VALUES(414, 14, '2024-02-18', '2025-02-17', 'Service agreement for printer maintenance and repairs.')
+INSERT INTO Contracts VALUES(415, 15, '2024-03-21', '2025-03-20', 'Contract for software license procurement and renewal.')
+INSERT INTO Contracts VALUES(416, 16, '2024-04-28', '2025-04-27', 'Agreement for IT infrastructure upgrade and optimization.')
+INSERT INTO Contracts VALUES(417, 17, '2024-05-12', '2025-05-11', 'Contract for database administration and performance tuning.')
+INSERT INTO Contracts VALUES(418, 18, '2024-06-16', '2025-06-15', 'Service level agreement for help desk and technical support.')
+INSERT INTO Contracts VALUES(419, 19, '2024-07-23', '2025-07-22', 'Contract for software development and customization.')
+INSERT INTO Contracts VALUES(420, 20, '2024-08-08', '2025-08-07', 'Agreement for network infrastructure design and implementation.')
+INSERT INTO Contracts VALUES(421, 21, '2024-09-02', '2025-09-01', 'Contract for website security assessment and vulnerability scanning.')
+INSERT INTO Contracts VALUES(422, 22, '2024-10-19', '2025-10-18', 'Service agreement for server maintenance and monitoring.')
+INSERT INTO Contracts VALUES(423, 23, '2024-11-08', '2025-11-07', 'Contract for IT training and certification programs.')
+INSERT INTO Contracts VALUES(424, 24, '2024-12-14', '2025-12-13', 'Agreement for disaster recovery planning and implementation.')
+INSERT INTO Contracts VALUES(425, 25, '2025-01-27', '2026-01-26', 'Contract for IT asset management and inventory control.')
+INSERT INTO Contracts VALUES(426, 26, '2025-02-09', '2026-02-08', 'Service level agreement for network uptime and performance.')
+INSERT INTO Contracts VALUES(427, 27, '2025-03-17', '2026-03-16', 'Contract for software testing and quality assurance.')
+INSERT INTO Contracts VALUES(428, 28, '2025-04-20', '2026-04-19', 'Agreement for cloud backup and data recovery services.')
+INSERT INTO Contracts VALUES(429, 29, '2025-05-03', '2026-05-02', 'Contract for website redesign and content management.')
+INSERT INTO Contracts VALUES(430, 30, '2025-06-25', '2026-06-24', 'Service agreement for network monitoring and troubleshooting.')
+
+SELECT * FROM Contracts
+
+CREATE TABLE Services (
+   ServiceID INT PRIMARY KEY,
+   Name VARCHAR(255),
+   Description VARCHAR(500)
+);
+
+INSERT INTO Services VALUES(601, 'Hardware Repair', 'Repair and troubleshooting of hardware components.')
+INSERT INTO Services VALUES(602, 'Software Installation', 'Installation and configuration of software applications.')
+INSERT INTO Services VALUES(603, 'Network Setup', 'Setup and configuration of computer networks.')
+INSERT INTO Services VALUES(604, 'Data Recovery', 'Recovery of lost or corrupted data from storage devices.')
+INSERT INTO Services VALUES(605, 'Virus Removal', 'Detection and removal of viruses and malware.')
+INSERT INTO Services VALUES(606, 'System Upgrade', 'Upgrade of computer systems for improved performance.')
+INSERT INTO Services VALUES(607, 'IT Consulting', 'Consulting services for IT strategy and planning.')
+INSERT INTO Services VALUES(608, 'Database Management', 'Management and administration of databases.')
+INSERT INTO Services VALUES(609, 'Web Development', 'Development and maintenance of websites.')
+INSERT INTO Services VALUES(610, 'Cloud Services', 'Implementation and management of cloud computing solutions.')
+INSERT INTO Services VALUES(611, 'Cybersecurity', 'Protection of computer systems and data from cyber threats.')
+INSERT INTO Services VALUES(612, 'Mobile App Development', 'Development of mobile applications.')
+INSERT INTO Services VALUES(613, 'IT Training', 'Training and education on IT technologies and tools.')
+INSERT INTO Services VALUES(614, 'IT Support', 'Technical support and troubleshooting for IT issues.')
+INSERT INTO Services VALUES(615, 'Server Management', 'Management and maintenance of server infrastructure.')
+INSERT INTO Services VALUES(616, 'Network Security', 'Security assessment and implementation for network infrastructure.')
+INSERT INTO Services VALUES(617, 'Data Backup and Recovery', 'Backup and recovery solutions for data protection.')
+INSERT INTO Services VALUES(618, 'IT Infrastructure Design', 'Design and planning of IT infrastructure.')
+INSERT INTO Services VALUES(619, 'Software Testing', 'Testing and quality assurance of software applications.')
+INSERT INTO Services VALUES(620, 'Virtualization', 'Implementation of virtualization technologies for resource optimization.')
+INSERT INTO Services VALUES(621, 'Wireless Network Setup', 'Setup and configuration of wireless networks.')
+INSERT INTO Services VALUES(622, 'IT Project Management', 'Management and coordination of IT projects.')
+INSERT INTO Services VALUES(623, 'Remote IT Support', 'Remote assistance and support for IT issues.')
+INSERT INTO Services VALUES(624, 'IT Asset Management', 'Management and tracking of IT assets and inventory.')
+INSERT INTO Services VALUES(625, 'Software Development', 'Custom software development and programming.')
+INSERT INTO Services VALUES(626, 'Network Monitoring', 'Monitoring and surveillance of network performance.')
+INSERT INTO Services VALUES(627, 'Cloud Migration', 'Migration of IT systems and data to the cloud.')
+INSERT INTO Services VALUES(628, 'Backup Solutions', 'Implementation of backup solutions for data protection.')
+INSERT INTO Services VALUES(629, 'IT Security Audit', 'Evaluation and assessment of IT security measures.')
+INSERT INTO Services VALUES(630, 'Data Center Management', 'Management and operation of data center facilities.')
+
+SELECT * FROM Services
+
+CREATE TABLE ContractServices
+(
+   ContractID INT FOREIGN KEY REFERENCES Contracts(ContractID),
+   ServiceID INT FOREIGN KEY REFERENCES Services(ServiceID)
+);
+
+INSERT INTO ContractServices VALUES(401, 601)
+INSERT INTO ContractServices VALUES(401, 602)
+INSERT INTO ContractServices VALUES(401, 603)
+INSERT INTO ContractServices VALUES(402, 604)
+INSERT INTO ContractServices VALUES(402, 605)
+INSERT INTO ContractServices VALUES(403, 606)
+INSERT INTO ContractServices VALUES(403, 607)
+INSERT INTO ContractServices VALUES(404, 608)
+INSERT INTO ContractServices VALUES(404, 609)
+INSERT INTO ContractServices VALUES(405, 610)
+INSERT INTO ContractServices VALUES(406, 611)
+INSERT INTO ContractServices VALUES(407, 612)
+INSERT INTO ContractServices VALUES(408, 613)
+INSERT INTO ContractServices VALUES(409, 614)
+INSERT INTO ContractServices VALUES(410, 615)
+INSERT INTO ContractServices VALUES(410, 616)
+INSERT INTO ContractServices VALUES(411, 617)
+INSERT INTO ContractServices VALUES(412, 618)
+INSERT INTO ContractServices VALUES(412, 619)
+INSERT INTO ContractServices VALUES(412, 620)
+INSERT INTO ContractServices VALUES(413, 621)
+INSERT INTO ContractServices VALUES(414, 622)
+INSERT INTO ContractServices VALUES(415, 623)
+INSERT INTO ContractServices VALUES(415, 624)
+INSERT INTO ContractServices VALUES(416, 625)
+INSERT INTO ContractServices VALUES(416, 626)
+INSERT INTO ContractServices VALUES(417, 627)
+INSERT INTO ContractServices VALUES(418, 628)
+INSERT INTO ContractServices VALUES(418, 629)
+INSERT INTO ContractServices VALUES(419, 630)
+
+SELECT * FROM ContractServices
+
+CREATE TABLE Technicians (
+   TechnicianID INT PRIMARY KEY,
+   Name VARCHAR(255),
+   Department VARCHAR(100),
+   Phone VARCHAR(20),
+   Email VARCHAR(255)
+);
+
+INSERT INTO Technicians VALUES(701, 'Mark Johnson', 'IT Support', '555-123-4567', 'mark.johnson@example.com')
+INSERT INTO Technicians VALUES(702, 'Sarah Wilson', 'Network Administration', '555-987-6543', 'sarah.wilson@example.com')
+INSERT INTO Technicians VALUES(703, 'Michael Thompson', 'Software Development', '555-456-7890', 'michael.thompson@example.com')
+INSERT INTO Technicians VALUES(704, 'Jessica Martinez', 'Database Management', '555-111-2222', 'jessica.martinez@example.com')
+INSERT INTO Technicians VALUES(705, 'Andrew Lewis', 'IT Support', '555-222-3333', 'andrew.lewis@example.com')
+INSERT INTO Technicians VALUES(706, 'Emily Turner', 'Network Administration', '555-444-5555', 'emily.turner@example.com')
+INSERT INTO Technicians VALUES(707, 'Daniel Hall', 'Software Development', '555-666-7777', 'daniel.hall@example.com')
+INSERT INTO Technicians VALUES(708, 'Sophia Brown', 'Database Management', '555-888-9999', 'sophia.brown@example.com')
+INSERT INTO Technicians VALUES(709, 'William Green', 'IT Support', '555-333-4444', 'william.green@example.com')
+INSERT INTO Technicians VALUES(710, 'Olivia Clark', 'Network Administration', '555-555-6666', 'olivia.clark@example.com')
+INSERT INTO Technicians VALUES(711, 'Ethan Baker', 'Software Development', '555-777-8888', 'ethan.baker@example.com')
+INSERT INTO Technicians VALUES(712, 'Ava Collins', 'Database Management', '555-999-0000', 'ava.collins@example.com')
+INSERT INTO Technicians VALUES(713, 'James Patterson', 'IT Support', '555-444-5555', 'james.patterson@example.com')
+INSERT INTO Technicians VALUES(714, 'Mia Rodriguez', 'Network Administration', '555-666-7777', 'mia.rodriguez@example.com')
+INSERT INTO Technicians VALUES(715, 'Benjamin Reed', 'Software Development', '555-888-9999', 'benjamin.reed@example.com')
+INSERT INTO Technicians VALUES(716, 'Amelia Sanders', 'Database Management', '555-111-2222', 'amelia.sanders@example.com')
+INSERT INTO Technicians VALUES(717, 'Henry Morris', 'IT Support', '555-222-3333', 'henry.morris@example.com')
+INSERT INTO Technicians VALUES(718, 'Charlotte Murphy', 'Network Administration', '555-444-5555', 'charlotte.murphy@example.com')
+INSERT INTO Technicians VALUES(719, 'Daniel Scott', 'Software Development', '555-666-7777', 'daniel.scott@example.com')
+INSERT INTO Technicians VALUES(720, 'Emily Turner', 'Database Management', '555-888-9999', 'emily.turner@example.com')
+INSERT INTO Technicians VALUES(721, 'Jacob Price', 'IT Support', '555-333-4444', 'jacob.price@example.com')
+INSERT INTO Technicians VALUES(722, 'Chloe Cooper', 'Network Administration', '555-555-6666', 'chloe.cooper@example.com')
+INSERT INTO Technicians VALUES(723, 'Logan Richardson', 'Software Development', '555-777-8888', 'logan.richardson@example.com')
+INSERT INTO Technicians VALUES(724, 'Sophia Jenkins', 'Database Management', '555-999-0000', 'sophia.jenkins@example.com')
+INSERT INTO Technicians VALUES(725, 'Samuel Parker', 'IT Support', '555-444-5555', 'samuel.parker@example.com')
+INSERT INTO Technicians VALUES(726, 'Grace Brooks', 'Network Administration', '555-666-7777', 'grace.brooks@example.com')
+INSERT INTO Technicians VALUES(727, 'Joseph Peterson', 'Software Development', '555-888-9999', 'joseph.peterson@example.com')
+INSERT INTO Technicians VALUES(728, 'Lily Cox', 'Database Management', '555-111-2222', 'lily.cox@example.com')
+INSERT INTO Technicians VALUES(729, 'Andrew Roberts', 'IT Support', '555-222-3333', 'andrew.roberts@example.com')
+INSERT INTO Technicians VALUES(730, 'Avery Wood', 'Network Administration', '555-444-5555', 'avery.wood@example.com')
+
+SELECT * FROM Technicians
+
+CREATE TABLE ServiceAssignments (
+   AssignmentID INT PRIMARY KEY,
+   ServiceCallID INT FOREIGN KEY REFERENCES ServiceCalls(ServiceCallID),
+   TechnicianID INT   FOREIGN KEY REFERENCES Technicians(TechnicianID),
+   AssignmentDate DATE
+);
+
+INSERT INTO ServiceAssignments VALUES(801, 101, 701, '2023-01-01')
+INSERT INTO ServiceAssignments VALUES(802, 102, 702, '2023-01-02')
+INSERT INTO ServiceAssignments VALUES(803, 103, 703, '2023-01-03')
+INSERT INTO ServiceAssignments VALUES(804, 104, 704, '2023-01-04')
+INSERT INTO ServiceAssignments VALUES(805, 105, 705, '2023-01-05')
+INSERT INTO ServiceAssignments VALUES(806, 106, 706, '2023-01-06')
+INSERT INTO ServiceAssignments VALUES(807, 107, 707, '2023-01-07')
+INSERT INTO ServiceAssignments VALUES(808, 108, 708, '2023-01-08')
+INSERT INTO ServiceAssignments VALUES(809, 109, 709, '2023-01-09')
+INSERT INTO ServiceAssignments VALUES(810, 110, 710, '2023-01-10')
+INSERT INTO ServiceAssignments VALUES(811, 111, 711, '2023-01-11')
+INSERT INTO ServiceAssignments VALUES(812, 112, 712, '2023-01-12')
+INSERT INTO ServiceAssignments VALUES(813, 113, 713, '2023-01-13')
+INSERT INTO ServiceAssignments VALUES(814, 114, 714, '2023-01-14')
+INSERT INTO ServiceAssignments VALUES(815, 115, 715, '2023-01-15')
+INSERT INTO ServiceAssignments VALUES(816, 116, 716, '2023-01-16')
+INSERT INTO ServiceAssignments VALUES(817, 117, 717, '2023-01-17')
+INSERT INTO ServiceAssignments VALUES(818, 118, 718, '2023-01-18')
+INSERT INTO ServiceAssignments VALUES(819, 119, 719, '2023-01-19')
+INSERT INTO ServiceAssignments VALUES(820, 120, 720, '2023-01-20')
+INSERT INTO ServiceAssignments VALUES(821, 121, 721, '2023-01-21')
+INSERT INTO ServiceAssignments VALUES(822, 122, 722, '2023-01-22')
+INSERT INTO ServiceAssignments VALUES(823, 123, 723, '2023-01-23')
+INSERT INTO ServiceAssignments VALUES(824, 124, 724, '2023-01-24')
+INSERT INTO ServiceAssignments VALUES(825, 125, 725, '2023-01-25')
+INSERT INTO ServiceAssignments VALUES(826, 126, 726, '2023-01-26')
+INSERT INTO ServiceAssignments VALUES(827, 127, 727, '2023-01-27')
+INSERT INTO ServiceAssignments VALUES(828, 128, 728, '2023-01-28')
+INSERT INTO ServiceAssignments VALUES(829, 129, 729, '2023-01-29')
+INSERT INTO ServiceAssignments VALUES(830, 130, 730, '2023-01-30')
+
+SELECT * FROM ServiceAssignments
+
+CREATE TABLE Inventory (
+   ProductID INT FOREIGN KEY REFERENCES Products(ProductID),
+   Quantity INT,
+   Location VARCHAR(100) 
+);
+
+INSERT INTO Inventory VALUES(501, 10, 'Warehouse A')
+INSERT INTO Inventory VALUES(502, 5, 'Warehouse B')
+INSERT INTO Inventory VALUES(503, 15, 'Warehouse C')
+INSERT INTO Inventory VALUES(504, 20, 'Warehouse A')
+INSERT INTO Inventory VALUES(505, 8, 'Warehouse B')
+INSERT INTO Inventory VALUES(506, 12, 'Warehouse C')
+INSERT INTO Inventory VALUES(507, 6, 'Warehouse A')
+INSERT INTO Inventory VALUES(508, 18, 'Warehouse B')
+INSERT INTO Inventory VALUES(509, 9, 'Warehouse C')
+INSERT INTO Inventory VALUES(510, 16, 'Warehouse A')
+INSERT INTO Inventory VALUES(511, 7, 'Warehouse B')
+INSERT INTO Inventory VALUES(512, 13, 'Warehouse C')
+INSERT INTO Inventory VALUES(513, 11, 'Warehouse A')
+INSERT INTO Inventory VALUES(514, 22, 'Warehouse B')
+INSERT INTO Inventory VALUES(515, 14, 'Warehouse C')
+INSERT INTO Inventory VALUES(516, 19, 'Warehouse A')
+INSERT INTO Inventory VALUES(517, 3, 'Warehouse B')
+INSERT INTO Inventory VALUES(518, 17, 'Warehouse C')
+INSERT INTO Inventory VALUES(519, 4, 'Warehouse A')
+INSERT INTO Inventory VALUES(520, 21, 'Warehouse B')
+INSERT INTO Inventory VALUES(521, 2, 'Warehouse C')
+INSERT INTO Inventory VALUES(522, 10, 'Warehouse A')
+INSERT INTO Inventory VALUES(523, 5, 'Warehouse B')
+INSERT INTO Inventory VALUES(524, 15, 'Warehouse C')
+INSERT INTO Inventory VALUES(525, 20, 'Warehouse A')
+INSERT INTO Inventory VALUES(526, 8, 'Warehouse B')
+INSERT INTO Inventory VALUES(527, 12, 'Warehouse C')
+INSERT INTO Inventory VALUES(528, 6, 'Warehouse A')
+INSERT INTO Inventory VALUES(529, 18, 'Warehouse B')
+INSERT INTO Inventory VALUES(530, 9, 'Warehouse C');
+
+SELECT * FROM Inventory
+
+CREATE TABLE SpareParts
+(
+   PartID INT PRIMARY KEY,
+   Name VARCHAR(25),
+   Description VARCHAR(500),
+   Price DECIMAL(10,2)
+);
+
+INSERT INTO SpareParts VALUES(901, 'Spark Plug', 'Ignites air/fuel mixture in the engine', 9.99)
+INSERT INTO SpareParts VALUES(902, 'Oil Filter', 'Removes impurities from engine oil', 12.99)
+INSERT INTO SpareParts VALUES(903, 'Brake Pads', 'Friction material for stopping the vehicle', 39.99)
+INSERT INTO SpareParts VALUES(904, 'Air Filter', 'Filters dust and debris from air entering engine', 14.99)
+INSERT INTO SpareParts VALUES(905, 'Battery', 'Provides electrical power to start the engine', 99.99)
+INSERT INTO SpareParts VALUES(906, 'Tire', 'Rubber component for vehicle traction and ride comfort', 79.99)
+INSERT INTO SpareParts VALUES(907, 'Alternator', 'Generates electricity to power vehicle electrical systems', 149.99)
+INSERT INTO SpareParts VALUES(908, 'Radiator', 'Cools the engine by dissipating heat', 89.99)
+INSERT INTO SpareParts VALUES(909, 'Water Pump', 'Circulates coolant through the engine', 59.99)
+INSERT INTO SpareParts VALUES(910, 'Fuel Pump', 'Delivers fuel from the tank to the engine', 79.99)
+INSERT INTO SpareParts VALUES(911, 'Starter Motor', 'Electric motor that starts the engine', 99.99)
+INSERT INTO SpareParts VALUES(912, 'Timing Belt', 'Synchronizes engine camshaft and crankshaft rotation', 49.99)
+INSERT INTO SpareParts VALUES(913, 'Thermostat', 'Regulates engine coolant temperature', 19.99)
+INSERT INTO SpareParts VALUES(914, 'Shock Absorber', 'Absorbs and dampens vehicle suspension movement', 69.99)
+INSERT INTO SpareParts VALUES(915, 'Strut Assembly', 'Suspension component for structural support and damping', 129.99)
+INSERT INTO SpareParts VALUES(916, 'Clutch Kit', 'Engages and disengages power transmission from the engine', 149.99)
+INSERT INTO SpareParts VALUES(917, 'Exhaust Manifold', 'Collects and directs exhaust gases from engine cylinders', 79.99)
+INSERT INTO SpareParts VALUES(918, 'Catalytic Converter', 'Reduces harmful emissions in vehicle exhaust gases', 199.99)
+INSERT INTO SpareParts VALUES(919, 'Oxygen Sensor', 'Measures oxygen levels in exhaust for fuel control', 39.99)
+INSERT INTO SpareParts VALUES(920, 'Ignition Coil', 'Generates high voltage for spark plugs', 29.99)
+INSERT INTO SpareParts VALUES(921, 'Fuel Injector', 'Delivers fuel to the engine cylinders', 49.99)
+INSERT INTO SpareParts VALUES(922, 'Steering Rack', 'Converts rotational motion into linear motion for steering', 199.99)
+INSERT INTO SpareParts VALUES(923, 'Control Arm', 'Suspension component for wheel control and alignment', 89.99)
+INSERT INTO SpareParts VALUES(924, 'Power Steering Pump', 'Provides hydraulic pressure for power steering', 129.99)
+INSERT INTO SpareParts VALUES(925, 'Wheel Bearing', 'Supports wheel rotation and reduces friction', 29.99)
+INSERT INTO SpareParts VALUES(926, 'Axle Shaft', 'Transfers power from the transmission to the wheels', 99.99)
+INSERT INTO SpareParts VALUES(927, 'Fuel Tank', 'Stores and supplies fuel to the engine', 149.99)
+INSERT INTO SpareParts VALUES(928, 'Window Regulator', 'Controls window movement', 69.99)
+INSERT INTO SpareParts VALUES(929, 'Ignition Switch', 'Controls vehicle ignition system', 39.99)
+INSERT INTO SpareParts VALUES(930, 'Brake Caliper', 'Applies force to brake pads for stopping the vehicle', 79.99)
+
+SELECT * FROM SpareParts 
+
+CREATE TABLE ServiceCallParts
+(
+   PartID INT FOREIGN KEY REFERENCES SpareParts(PartID),
+   ServiceCallID INT FOREIGN KEY REFERENCES ServiceCalls(ServiceCallID),
+   Quantity INT
+);
+
+INSERT INTO ServiceCallParts VALUES(901, 101, 2)
+INSERT INTO ServiceCallParts VALUES(902, 101, 1)
+INSERT INTO ServiceCallParts VALUES(903, 101, 4)
+INSERT INTO ServiceCallParts VALUES(904, 102, 1)
+INSERT INTO ServiceCallParts VALUES(905, 102, 1)
+INSERT INTO ServiceCallParts VALUES(906, 103, 2)
+INSERT INTO ServiceCallParts VALUES(907, 103, 1)
+INSERT INTO ServiceCallParts VALUES(908, 104, 1)
+INSERT INTO ServiceCallParts VALUES(909, 104, 2)
+INSERT INTO ServiceCallParts VALUES(910, 105, 3)
+INSERT INTO ServiceCallParts VALUES(911, 106, 1)
+INSERT INTO ServiceCallParts VALUES(912, 106, 1)
+INSERT INTO ServiceCallParts VALUES(913, 107, 2)
+INSERT INTO ServiceCallParts VALUES(914, 107, 2)
+INSERT INTO ServiceCallParts VALUES(915, 108, 2)
+INSERT INTO ServiceCallParts VALUES(916, 109, 1)
+INSERT INTO ServiceCallParts VALUES(917, 109, 1)
+INSERT INTO ServiceCallParts VALUES(918, 109, 1)
+INSERT INTO ServiceCallParts VALUES(919, 110, 4)
+INSERT INTO ServiceCallParts VALUES(920, 111, 1)
+INSERT INTO ServiceCallParts VALUES(921, 111, 2)
+INSERT INTO ServiceCallParts VALUES(922, 112, 1)
+INSERT INTO ServiceCallParts VALUES(923, 113, 2)
+INSERT INTO ServiceCallParts VALUES(924, 113, 1)
+INSERT INTO ServiceCallParts VALUES(925, 114, 2)
+INSERT INTO ServiceCallParts VALUES(926, 114, 2)
+INSERT INTO ServiceCallParts VALUES(927, 115, 1)
+INSERT INTO ServiceCallParts VALUES(928, 116, 1)
+INSERT INTO ServiceCallParts VALUES(929, 117, 1)
+INSERT INTO ServiceCallParts VALUES(930, 118, 2)
+
+SELECT * FROM ServiceCallParts
+
+CREATE TABLE Expenses (
+   ExpenseID INT PRIMARY KEY,
+   ServiceCallID INT FOREIGN KEY REFERENCES ServiceCalls(ServiceCallID),
+   ExpenseDate DATE,
+   ExpenseDescription VARCHAR(500),
+   Amount DECIMAL(10,2)
+);
+
+INSERT INTO Expenses VALUES(301, 101, '2023-01-05', 'Travel expenses', 100.50)
+INSERT INTO Expenses VALUES(302, 102, '2023-02-10', 'Equipment purchase', 500.00)
+INSERT INTO Expenses VALUES(303, 103, '2023-03-15', 'Maintenance cost', 250.75)
+INSERT INTO Expenses VALUES(304, 104, '2023-04-20', 'Supplies purchase', 75.20)
+INSERT INTO Expenses VALUES(305, 105, '2023-05-25', 'Repair expenses', 300.00)
+INSERT INTO Expenses VALUES(306, 106, '2023-06-30', 'Consulting fees', 200.50)
+INSERT INTO Expenses VALUES(307, 107, '2023-07-15', 'Software license renewal', 150.00)
+INSERT INTO Expenses VALUES(308, 108, '2023-08-20', 'Advertisement expenses', 180.25)
+INSERT INTO Expenses VALUES(309, 109, '2023-09-25', 'Training cost', 400.00)
+INSERT INTO Expenses VALUES(310, 110, '2023-10-31', 'Legal fees', 300.50)
+INSERT INTO Expenses VALUES(311, 111, '2023-11-05', 'Utility bills', 250.00)
+INSERT INTO Expenses VALUES(312, 112, '2023-12-10', 'Office furniture purchase', 800.00)
+INSERT INTO Expenses VALUES(313, 113, '2024-01-15', 'Printing expenses', 120.75)
+INSERT INTO Expenses VALUES(314, 114, '2024-02-20', 'Shipping charges', 50.00)
+INSERT INTO Expenses VALUES(315, 115, '2024-03-25', 'Conference registration', 350.00)
+INSERT INTO Expenses VALUES(316, 116, '2024-04-30', 'Insurance premium', 180.50)
+INSERT INTO Expenses VALUES(317, 117, '2024-05-05', 'Repair and maintenance', 150.00)
+INSERT INTO Expenses VALUES(318, 118, '2024-06-10', 'Software subscription', 99.99)
+INSERT INTO Expenses VALUES(319, 119, '2024-07-15', 'Travel expenses', 200.50)
+INSERT INTO Expenses VALUES(320, 120, '2024-08-20', 'Marketing campaign', 500.00)
+INSERT INTO Expenses VALUES(321, 121, '2024-09-25', 'Office supplies', 75.25)
+INSERT INTO Expenses VALUES(322, 122, '2024-10-31', 'Website development', 900.00)
+INSERT INTO Expenses VALUES(323, 123, '2024-11-05', 'Renovation cost', 600.50)
+INSERT INTO Expenses VALUES(324, 124, '2024-12-10', 'Employee training', 400.00)
+INSERT INTO Expenses VALUES(325, 125, '2025-01-15', 'Software upgrade', 350.75)
+
+SELECT * FROM Expenses
+
+--QUERIES:
+
+--Queries using joins:
+
+--1.Get the total number of service calls opened by each employee:
+SELECT e.Name, COUNT(sc.ServiceCallID) AS TotalServiceCalls
+FROM Employees e
+LEFT JOIN ServiceCalls sc ON e.EmployeeID = sc.EmployeeID
+GROUP BY e.Name;
+
+
+SELECT t.Name, COUNT(sa.ServiceCallID) AS TotalAssignments
+FROM Technicians t
+INNER JOIN ServiceAssignments sa ON t.TechnicianID = sa.TechnicianID
+GROUP BY t.Name
+ORDER BY TotalAssignments DESC;
+
+SELECT sc.ServiceCallID, c.Name AS CustomerName, t.Name AS TechnicianName
+FROM ServiceCalls sc
+INNER JOIN Customers c ON sc.CustomerID = c.CustomerID
+INNER JOIN ServiceAssignments sa ON sc.ServiceCallID = sa.ServiceCallID
+INNER JOIN Technicians t ON sa.TechnicianID = t.TechnicianID;
+
+SELECT MONTH(DateOpened) AS Month, COUNT(ServiceCallID) AS TotalServiceCalls
+FROM ServiceCalls
+WHERE YEAR(DateOpened) = YEAR(GETDATE())
+GROUP BY MONTH(DateOpened);
+
+SELECT sc.ServiceCallID, c.Name AS CustomerName, sc.DateOpened, COUNT(sn.NoteID) AS TotalNotes
+FROM ServiceCalls sc
+INNER JOIN Customers c ON sc.CustomerID = c.CustomerID
+LEFT JOIN ServiceCallNotes sn ON sc.ServiceCallID = sn.ServiceCallID
+GROUP BY sc.ServiceCallID, c.Name, sc.DateOpened;
+
+SELECT sc.ServiceCallID, AVG(sp.Price) AS AveragePartPrice
+FROM ServiceCalls sc
+INNER JOIN ServiceCallParts sparts ON sc.ServiceCallID = sparts.ServiceCallID
+INNER JOIN SpareParts sp ON sparts.PartID = sp.PartID
+GROUP BY sc.ServiceCallID;
+
+SELECT sc.ServiceCallID, SUM(e.Amount) AS TotalExpenses
+FROM ServiceCalls sc
+LEFT JOIN Expenses e ON sc.ServiceCallID = e.ServiceCallID
+GROUP BY sc.ServiceCallID;
+
+SELECT sc.ServiceCallID, sc.Description, SUM(e.Amount) AS TotalExpenses
+FROM ServiceCalls sc
+INNER JOIN Expenses e ON sc.ServiceCallID = e.ServiceCallID
+GROUP BY sc.ServiceCallID, sc.Description
+HAVING SUM(e.Amount) > (SELECT AVG(Amount) FROM Expenses);
+
+
+SELECT t.Name
+FROM Technicians t
+LEFT JOIN ServiceAssignments sa ON t.TechnicianID = sa.TechnicianID
+WHERE sa.AssignmentID IS NULL;
+
+SELECT sp.Name, sp.Description, sp.Price
+FROM SpareParts sp
+INNER JOIN ServiceCallParts scparts ON sp.PartID = scparts.PartID
+ORDER BY sp.Price DESC;
+
+SELECT e.Name
+FROM Employees e
+WHERE e.EmployeeID IN (
+  SELECT sc.EmployeeID
+  FROM ServiceCalls sc
+  WHERE sc.EmployeeID = e.EmployeeID AND sc.DateClosed IS NOT NULL
+) AND e.EmployeeID IN (
+  SELECT sc.EmployeeID
+  FROM ServiceCalls sc
+  WHERE sc.EmployeeID = e.EmployeeID AND sc.DateClosed IS NULL
+);
+
+SELECT c.Name
+FROM Customers c
+WHERE c.CustomerID IN (
+  SELECT co.CustomerID
+  FROM Contracts co
+  WHERE co.EndDate >= GETDATE()
+);
+
+SELECT t.Name
+FROM Technicians t
+WHERE t.TechnicianID IN (
+  SELECT sa.TechnicianID
+  FROM ServiceAssignments sa
+  INNER JOIN ServiceCalls sc ON sa.ServiceCallID = sc.ServiceCallID
+  INNER JOIN Contracts co ON sc.CustomerID = co.CustomerID
+);
+
+SELECT sc.ServiceCallID, c.Name AS CustomerName
+FROM ServiceCalls sc
+INNER JOIN Customers c ON sc.CustomerID = c.CustomerID
+WHERE c.Email IN (
+  SELECT e.Email
+  FROM Employees e
+);
+
+SELECT COUNT(*) AS TotalCustomers
+FROM Customers;
+
+SELECT AVG(Price) AS AveragePrice
+FROM Products;
+
+SELECT MAX(Price) AS MaxPrice
+FROM SpareParts;
+
+SELECT MIN(StartDate) AS MinStartDate
+FROM Contracts;
+
+SELECT COUNT(*) AS TotalServiceCalls
+FROM ServiceCalls;
+
+SELECT SUM(Amount) AS TotalExpenses
+FROM Expenses;
+
+SELECT AVG(Quantity) AS AverageQuantity
+FROM ServiceCallParts;
+
+SELECT t.Name, COUNT(sa.AssignmentID) AS TotalAssignments
+FROM Technicians t
+INNER JOIN ServiceAssignments sa ON t.TechnicianID = sa.TechnicianID
+GROUP BY t.Name
+ORDER BY TotalAssignments DESC;
+
+SELECT sc.ServiceCallID, c.Name AS CustomerName, sc.DateOpened
+FROM ServiceCalls sc
+INNER JOIN Customers c ON sc.CustomerID = c.CustomerID
+WHERE sc.DateOpened = (SELECT MIN(DateOpened) FROM ServiceCalls);
+
+SELECT t.Name AS TechnicianName, AVG(scp.Quantity) AS AverageQuantity
+FROM Technicians t
+INNER JOIN ServiceAssignments sa ON t.TechnicianID = sa.TechnicianID
+INNER JOIN ServiceCalls sc ON sa.ServiceCallID = sc.ServiceCallID
+INNER JOIN ServiceCallParts scp ON sc.ServiceCallID = scp.ServiceCallID
+GROUP BY t.Name;
+
+SELECT c.Name, SUM(e.Amount) AS TotalExpenses
+FROM Customers c
+INNER JOIN ServiceCalls sc ON c.CustomerID = sc.CustomerID
+INNER JOIN Expenses e ON sc.ServiceCallID = e.ServiceCallID
+GROUP BY c.Name
+ORDER BY TotalExpenses DESC;
+
+SELECT c.Name
+FROM Customers c
+WHERE EXISTS (
+  SELECT 1
+  FROM Contracts co
+  WHERE co.CustomerID = c.CustomerID
+    AND co.EndDate >= GETDATE()
+);
+
+SELECT sp.Name
+FROM SpareParts sp
+WHERE EXISTS (
+  SELECT 1
+  FROM ServiceCallParts sparts
+  LEFT JOIN ContractServices cs ON sparts.PartID = cs.PartID
+  WHERE sparts.PartID = sp.PartID
+    AND cs.ContractID IS NULL
+);
+
+SELECT sc.ServiceCallID, c.Name AS CustomerName
+FROM ServiceCalls sc
+INNER JOIN Customers c ON sc.CustomerID = c.CustomerID
+WHERE EXISTS (
+  SELECT 1
+  FROM Contracts co
+  WHERE co.CustomerID = c.CustomerID
+    AND co.EndDate >= GetDATE()
+);
+
+SELECT sc.ServiceCallID, sc.Description
+FROM ServiceCalls sc
+WHERE EXISTS (
+  SELECT 1
+  FROM ServiceCallNotes sn
+  WHERE sn.ServiceCallID = sc.ServiceCallID
+    AND sn.EmployeeID = sc.EmployeeID
+);
+
+SELECT sc.ServiceCallID, sc.Description
+FROM ServiceCalls sc
+WHERE (
+  SELECT SUM(e.Amount)
+  FROM Expenses e
+  WHERE e.ServiceCallID = sc.ServiceCallID
+) > (
+  SELECT AVG(Amount)
+  FROM Expenses
+);
+
+SELECT t.Name
+FROM Technicians t
+WHERE NOT EXISTS (
+  SELECT 1
+  FROM ServiceAssignments sa
+  WHERE sa.TechnicianID = t.TechnicianID
+);
+
+
+SELECT Name
+FROM Customers
+WHERE Name LIKE 'A%';
+
+SELECT Name
+FROM Employees
+WHERE Name LIKE '%son';
+
+SELECT Name
+FROM Technicians
+WHERE Name LIKE '%e%';
+
+SELECT Name
+FROM Products
+WHERE Name LIKE 'S%e';
+
+SELECT Name
+FROM Customers
+WHERE Name LIKE '_o%o%';
+
+
+SELECT c.Name, SUM(e.Amount) AS TotalExpenses
+FROM Customers c
+JOIN ServiceCalls sc ON c.CustomerID = sc.CustomerID
+JOIN Expenses e ON sc.ServiceCallID = e.ServiceCallID
+GROUP BY c.CustomerID, c.Name
+ORDER BY TotalExpenses DESC;
+
+SELECT LEFT(Name, 1) AS FirstLetter, AVG(Price) AS AveragePrice
+FROM Products
+GROUP BY Name;
+
+SELECT sc.ServiceCallID, c.Name AS CustomerName, e.Name AS EmployeeName, SUM(exp.Amount) AS TotalExpenses
+FROM ServiceCalls sc
+JOIN Customers c ON sc.CustomerID = c.CustomerID
+JOIN Employees e ON sc.EmployeeID = e.EmployeeID
+JOIN Expenses exp ON sc.ServiceCallID = exp.ServiceCallID
+GROUP BY sc.ServiceCallID, c.Name, e.Name
+ORDER BY TotalExpenses DESC;
+
+SELECT t.Name
+FROM Technicians t
+JOIN ServiceAssignments sa ON t.TechnicianID = sa.TechnicianID
+GROUP BY t.Name
+HAVING COUNT(sa.ServiceCallID) >= 2;
+
+SELECT sc.ServiceCallID, COUNT(sn.NoteID) AS NoteCount
+FROM ServiceCalls sc
+JOIN ServiceCallNotes sn ON sc.ServiceCallID = sn.ServiceCallID
+GROUP BY sc.ServiceCallID
+ORDER BY NoteCount DESC;
+
+SELECT ProductID, Name, Price
+FROM Products
+WHERE Price > (
+  SELECT AVG(Price)
+  FROM Products
+);
+
+SELECT ServiceCallID, AVG(Quantity) AS AverageQuantity
+FROM ServiceCallParts
+GROUP BY ServiceCallID;
+
+SELECT ServiceCallID, DateOpened
+FROM ServiceCalls
+ORDER BY DateOpened ASC;
+
+SELECT ServiceCallID, AVG(sp.Price) AS AveragePrice
+FROM ServiceCallParts scp
+JOIN SpareParts sp ON scp.PartID = sp.PartID
+GROUP BY ServiceCallID;
+
+SELECT e.Name
+FROM Employees e
+LEFT JOIN ServiceCalls sc ON e.EmployeeID = sc.EmployeeID
+WHERE sc.ServiceCallID IS NULL;
+
+SELECT ServiceCallID, SUM(Quantity) AS TotalPartsUsed
+FROM ServiceCallParts
+GROUP BY ServiceCallID
+ORDER BY ServiceCallID;
+
+SELECT e1.Name, e2.Name
+FROM Employees e1
+JOIN Employees e2 ON e1.Position = e2.Position AND e1.Department = e2.Department
+WHERE e1.EmployeeID <> e2.EmployeeID;
+
+SELECT e.Name, sc.Description
+FROM Employees e
+JOIN ServiceCalls sc ON e.EmployeeID = sc.EmployeeID
+GROUP BY e.Name, sc.Description
+HAVING COUNT(DISTINCT sc.ServiceCallID) > 1;
+
+SELECT sp.PartID, sp.Name, COUNT(scp.PartID) AS UsageCount
+FROM SpareParts sp
+JOIN ServiceCallParts scp ON sp.PartID = scp.PartID
+GROUP BY sp.PartID, sp.Name
+ORDER BY UsageCount DESC;
+
+
+SELECT e.Name
+FROM Employees e
+JOIN ServiceCalls sc ON e.EmployeeID = sc.EmployeeID
+GROUP BY e.Name
+HAVING COUNT(DISTINCT sc.CustomerID) <2;
